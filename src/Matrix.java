@@ -5,30 +5,28 @@ public class Matrix {
     public static void main(String[] args)
     {
         int a, b;
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Введите количество строк массива: ");
-        a = in.nextInt();
+        a = sc.nextInt();
         System.out.println("Введите количество столбцов массива: ");
-        b = in.nextInt();
+        b = sc.nextInt();
 
         int[][] mass = new int[a][b];
 
-        for (int i = 0; i < mass.length; i++)
+        for (int i = 0; i < a; i++)
         {
-            for (int j = 0; j < mass[i].length; j++)
+            for (int j = 0; j < b; j++)
             {
                 System.out.print("Введите элемент arr[" + i + "][" + j + "]:");
-                mass[i][j] = in.nextInt() * 3;
+                mass[i][j] = sc.nextInt();
             }
         }
 
-        for (int i = 0; i < mass.length; i++)
-        {
-            for (int j = 0; j < mass[i].length; j++)
+        for (int j = 0; j < a; j++)
             {
-                System.out.print(mass[i][j] + "\t");
+                System.out.print(mass[0][j] * 3 + "\t");
             }
             System.out.println();
-        }
+
     }
 }
